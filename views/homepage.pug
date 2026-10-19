@@ -1,0 +1,32 @@
+
+doctype html
+html
+    head
+        title= title
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+
+    body
+        h1 HubSpot Practicum - Contacts
+
+        a(href="/update-cobj") Add to this table
+
+        table
+            thead
+                tr
+                    th First Name
+                    th Last Name
+                    th Email
+                    th Name
+                    th Category
+                    th Status
+
+            tbody
+                each contact in data
+                    tr
+                        td= contact.properties.firstname || '-'
+                        td= contact.properties.lastname || '-'
+                        td= contact.properties.email || '-'
+                        td= contact.properties.test_name || '-'
+                        td= contact.properties.test_category || '-'
+                        td= contact.properties.test_status || '-'
